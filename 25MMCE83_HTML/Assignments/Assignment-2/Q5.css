@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+header {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-link {
+    color: #ff9800; 
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 1.5rem;
+}
+.trainer-section {
+    background-color: #e3f2fd; 
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.signup-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+.signup-text {
+    color: #2e7d32; 
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.signup-btn {
+    background-color: #2e7d32; 
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    background-color: #333333; 
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+}

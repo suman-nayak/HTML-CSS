@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #eef4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.signup-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.banner-section {
+    background-color: #000000;
+    color: #ffffff;
+    width: 45%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-image {
+    width: 120px;
+    margin-bottom: 1.5rem;
+    filter: invert(1); 
+}
+
+.brand-name {
+    color: #00a8ff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.banner-text {
+    font-size: 0.9rem;
+    color: #a1a1aa;
+    line-height: 1.5;
+}
+
+.form-section {
+    width: 55%;
+    padding: 3rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #111827;
+}
+
+.input-group input {
+    border: none;
+    border-bottom: 1px solid #cbd5e1;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    outline: none;
+    color: #374151;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.input-group input:focus {
+    border-bottom-color: #2563eb;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.checkbox-group label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.submit-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 50px; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
+}
