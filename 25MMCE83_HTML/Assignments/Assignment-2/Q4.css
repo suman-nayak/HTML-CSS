@@ -10,8 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
+    height: 800px;
+    padding: 45px;
 }
 
 .signup-container {
@@ -37,9 +37,12 @@ body {
 }
 
 .hero-image {
-    width: 120px;
-    margin-bottom: 1.5rem;
-    filter: invert(1); 
+    background-image: url(./../Media/login-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 410px;
+    margin-bottom: 30px;
 }
 
 .brand-name {
