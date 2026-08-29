@@ -1,3 +1,5 @@
+/* style.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,53 +8,247 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #ffffff;
+    color: #333;
 }
 
-main {
-    flex: 1;
+/* --- Typography --- */
+.section-title {
+    color: #2e7d32;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
-header {
-    padding: 1.5rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+.section-title.left-align {
+    text-align: left;
+    margin-bottom: 20px;
 }
-.header-link {
-    color: #ff9800; 
+
+/* --- Header / Hero Section --- */
+.hero {
+    /* Replace with your background image path */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../Media/codecamp.avif);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.btn-warning {
+    background-color: #ff9800;
+    color: #ffffff;
     text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 25px;
     font-weight: bold;
-    margin-right: 1.5rem;
+    display: inline-block;
 }
-.trainer-section {
-    background-color: #e3f2fd; 
-    padding: 4rem 2rem;
+
+/* --- Features Section --- */
+.features {
+    padding: 60px 10%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.features .card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #f0f0f0;
     text-align: center;
 }
+
+.features .card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.features .card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.features .card p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Trainers Section --- */
+.trainers {
+    background-color: #e3f2fd;
+    padding: 60px 10%;
+}
+
+.trainers .card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.trainers .card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.trainers .card .role {
+    color: #2e7d32;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.trainers .card p:not(.role) {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Signup Section --- */
 .signup-section {
-    padding: 4rem 2rem;
-    text-align: center;
-    background-color: #ffffff;
+    padding: 60px 10%;
+    background-color: #fff;
 }
-.signup-text {
-    color: #2e7d32; 
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+
+.signup-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
 }
-.signup-btn {
-    background-color: #2e7d32; 
-    color: #ffffff;
+
+.info-column, .form-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list .check {
+    color: #fff;
+    background-color: #66bb6a;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.form-column form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-column input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-column input:focus {
+    border-color: #2e7d32;
+}
+
+.btn-success {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 12px;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 14px;
     font-weight: bold;
-    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
+
+.btn-success:hover {
+    background-color: #1b5e20;
+}
+
+/* --- Footer --- */
 footer {
-    background-color: #333333; 
-    color: #ffffff;
+    background-color: #333333;
+    color: #fff;
     text-align: center;
-    padding: 2rem;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    font-size: 12px;
+    color: #fff;
+}
+
+.footer-links a {
+    color: #2e7d32;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }

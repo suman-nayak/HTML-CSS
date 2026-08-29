@@ -3,32 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Template</title>
+    <title>CodeCamp Landing Page</title>
     <link rel="stylesheet" href="Q5.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="#" class="header-link">Home</a>
-            <a href="#" class="header-link">Trainers</a>
-            <a href="#" class="header-link">Contact</a>
-        </nav>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>CodeCamp</h1>
+            <p>Learn HTML, CSS, JavaScript & Bootstrap from scratch</p>
+            <a href="#" class="btn-warning">Start Learning</a>
+        </div>
     </header>
 
     <main>
-        <section class="trainer-section">
-            <h2>Meet Our Trainers</h2>
-            </section>
+        <!-- Features Section -->
+        <section class="features">
+            <h2 class="section-title">What You'll Learn</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./../Media/html.png" alt="HTML5">
+                    <h3>HTML Basics</h3>
+                    <p>Structure web pages using semantic elements and tags.</p>
+                </div>
+                <div class="card">
+                    <img src="./../Media/css.png" alt="CSS3">
+                    <h3>CSS Styling</h3>
+                    <p>Make your website beautiful with layouts, fonts, and colors.</p>
+                </div>
+                <div class="card">
+                    <img src="./../Media/javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>Add interactivity with JavaScript.</p>
+                </div>
+                <div class="card">
+                    <img src="./../Media/bootstrap.png" alt="Bootstrap">
+                    <h3>BootStrap</h3>
+                    <p>Design mobile responsive layouts with Bootstrap 5.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Trainers Section -->
+        <section class="trainers">
+            <h2 class="section-title">Meet Our Trainers</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img class="profile-img" src="./../Media/user-1.jpg" alt="John Anderson">
+                    <h3>John Anderson</h3>
+                    <p class="role">HTML & Web Development</p>
+                    <p>Helps beginners understand HTML and build the foundation of modern websites.</p>
+                </div>
+                <div class="card">
+                    <img class="profile-img" src="./../Media/user-2.jpg" alt="Sarah Williams">
+                    <h3>Sarah Williams</h3>
+                    <p class="role">CSS & UI Design</p>
+                    <p>Teaches students how to create attractive layouts using CSS and responsive design.</p>
+                </div>
+                <div class="card">
+                    <img class="profile-img" src="./../Media/user-3.jpg" alt="David Miller">
+                    <h3>David Miller</h3>
+                    <p class="role">JavaScript</p>
+                    <p>Introduces programming concepts and helps students create interactive websites.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign Up / Info Section -->
         <section class="signup-section">
-            <h2 class="signup-text">Ready to get started?</h2>
-            <button class="signup-btn">Sign Up</button>
+            <div class="signup-content">
+                <div class="info-column">
+                    <h2 class="section-title left-align">Join CodeCamp</h2>
+                    <p class="info-text">Start your journey into web development with our free courses in HTML, CSS, JavaScript and Bootstrap.</p>
+                    <ul class="feature-list">
+                        <li><span class="check">&#10004;</span> Beginner Friendly</li>
+                        <li><span class="check">&#10004;</span> Build Real Projects</li>
+                        <li><span class="check">&#10004;</span> Free Certificate</li>
+                    </ul>
+                </div>
+                <div class="form-column">
+                    <h2 class="section-title left-align">Sign Up Now</h2>
+                    <form action="#">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="password" placeholder="Create Password" required>
+                        <button type="submit" class="btn-success">Get Started</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
+        <p>&copy; 2025 CodeCamp. All rights reserved</p>
+        <div class="footer-links">
+            <a href="#">About</a> | <a href="#">Courses</a> | <a href="#">Contact</a>
+        </div>
     </footer>
 
 </body>
