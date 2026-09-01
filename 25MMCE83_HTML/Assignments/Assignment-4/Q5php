@@ -1,0 +1,15 @@
+<?php
+
+$start = 1;
+$end = 10;
+$sum = 0;
+
+for($i = $start; $i <= $end; $i++){
+    if($i % 2 != 0){
+        $sum = $sum + $i;
+    }
+}
+
+echo "Sum of odd numbers = ".$sum;
+
+?>
