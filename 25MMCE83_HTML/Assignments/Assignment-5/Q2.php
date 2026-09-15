@@ -1,35 +1,42 @@
 <?php
 
-$str = "PHP stands for PHP Hypertext Preprocessor";
-echo "a. Length string: " . strlen($str);
-echo "<br>";
-echo "b. Uppercase: " . strtoupper($str);
-echo "<br>";
-$words = explode(" ", $str);
-$lengths = array_map("strlen", $words);
-$maxLength = max($lengths);
-$minLength = min($lengths);
+$s = "PHP stands for PHP Hypertext Preprocessor";
 
-$maxWords = [];
-$minWords = [];
+echo "String: ".$s;
+echo "<br>";
 
-foreach ($words as $word) {
-    if (strlen($word) == $maxLength) {
-        $maxWords[] = $word;
+echo "Length: ".strlen($s);
+echo "<br>";
+
+echo "Upper Case: ".strtoupper($s);
+echo "<br>";
+
+$arr = explode(" ", $s);
+
+$max = $arr[0];
+$min = $arr[0];
+
+for($i = 1; $i < count($arr); $i++){
+    if(strlen($arr[$i]) > strlen($max)){
+        $max = $arr[$i];
     }
-    if (strlen($word) == $minLength) {
-        $minWords[] = $word;
+
+    if(strlen($arr[$i]) < strlen($min)){
+        $min = $arr[$i];
     }
 }
 
-echo "c. Max length word: " . implode(", ", $maxWords) . " (" . $maxLength . ")";
+echo "Maximum Length Word: ".$max." = ".strlen($max);
 echo "<br>";
-echo "Min length word: " . implode(", ", $minWords) . " (" . $minLength . ")";
+echo "Minimum Length Word: ".$min." = ".strlen($min);
 echo "<br>";
-echo "d. Constructed string: " . implode("-", $words);
+
+echo "New String: ".implode("-", $arr);
 echo "<br>";
-echo "e. Location of PHP: " . strpos($str, "PHP");
+
+echo "Location of PHP: ".strpos($s, "PHP");
 echo "<br>";
-echo "f. Replaced string: " . str_replace("PHP", "XYZ", $str);
+
+echo "After Replace: ".str_replace("PHP", "XYZ", $s);
 
 ?>

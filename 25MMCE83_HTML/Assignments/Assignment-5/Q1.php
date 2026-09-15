@@ -1,12 +1,16 @@
 <?php
-date_default_timezone_set("Asia/Kolkata");
 
-echo "current date".date("h:i:s A");
-echo"<br> ";
-echo "todays date".date("Y-m-d");
-echo " <br>";
-echo " date is :".date("d-M-Y");
+date_default_timezone_set('Asia/Kolkata');
+
+echo "Current Time: ".date("H:i:s");
 echo "<br>";
-echo "DATE AND TIME".date("l,d F Y , h:i A");
+
+echo "Today's Date: ".date("d-m-Y");
+echo "<br>";
+
+echo "Date: ".date("d-M-Y");
+echo "<br>";
+
+echo "Date and Time: ".date("l, d F Y, h:i A");
 
 ?>

@@ -1,63 +1,69 @@
 <?php
-$numbers = [23, 5, 67, 10, 42, 8, 15, 10, 99, 3];
 
-echo "Original array: ";
-for ($i = 0; $i < count($numbers); $i++) {
-    echo $numbers[$i] . " ";
-}
-echo "\n\n";
+$arr = [25, 10, 45, 7, 32, 18, 50, 3, 27, 15];
 
-$elementCount = count($numbers);
-echo "a. Number of elements: " . $elementCount . "\n\n";
+echo "Number of elements: ".count($arr);
+echo "<br>";
 
-$largest = $numbers[0];
-$smallest = $numbers[0];
-for ($i = 1; $i < count($numbers); $i++) {
-    if ($numbers[$i] > $largest) {
-        $largest = $numbers[$i];
+$largest = $arr[0];
+$smallest = $arr[0];
+
+for($i = 1; $i < count($arr); $i++){
+    if($arr[$i] > $largest){
+        $largest = $arr[$i];
     }
-    if ($numbers[$i] < $smallest) {
-        $smallest = $numbers[$i];
+
+    if($arr[$i] < $smallest){
+        $smallest = $arr[$i];
     }
 }
-echo "b. Largest number: " . $largest . "\n";
-echo "   Smallest number: " . $smallest . "\n\n";
 
-$reversed = array_reverse($numbers);
-echo "c. Reversed array: ";
-for ($i = 0; $i < count($reversed); $i++) {
-    echo $reversed[$i] . " ";
-}
-echo "\n\n";
+echo "Largest number: ".$largest;
+echo "<br>";
 
-$sorted = $numbers;
-sort($sorted);
-echo "d. Sorted array (ascending): ";
-for ($i = 0; $i < count($sorted); $i++) {
-    echo $sorted[$i] . " ";
-}
-echo "\n\n";
+echo "Smallest number: ".$smallest;
+echo "<br>";
 
-$sortedDesc = $numbers;
-rsort($sortedDesc);
-echo "e. Sorted array (descending): ";
-for ($i = 0; $i < count($sortedDesc); $i++) {
-    echo $sortedDesc[$i] . " ";
+echo "Reverse array: ";
+
+for($i = count($arr)-1; $i >= 0; $i--){
+    echo $arr[$i]." ";
 }
-echo "\n\n";
+
+echo "<br>";
+
+sort($arr);
+
+echo "Sorted array: ";
+
+for($i = 0; $i < count($arr); $i++){
+    echo $arr[$i]." ";
+}
+
+echo "<br>";
+
+rsort($arr);
+
+echo "Reverse sorted array: ";
+
+for($i = 0; $i < count($arr); $i++){
+    echo $arr[$i]." ";
+}
+
+echo "<br>";
 
 $found = false;
-$index = -1;
-for ($i = 0; $i < count($numbers); $i++) {
-    if ($numbers[$i] == 10) {
+
+for($i = 0; $i < count($arr); $i++){
+    if($arr[$i] == 10){
+        echo "10 is present at index: ".$i;
         $found = true;
-        $index = $i;
         break;
     }
 }
-if ($found) {
-    echo "f. Number 10 is present at index: " . $index . "\n";
-} else {
-    echo "f. Number 10 is not present in the array.\n";
+
+if($found == false){
+    echo "10 is not present in the array";
 }
+
 ?>

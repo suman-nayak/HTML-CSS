@@ -1,29 +1,43 @@
 <?php
-$string = "The quick brown fox jumps over the lazy dog";
 
-$vowels = 'aeiouAEIOU';
-$vowelCount = 0;
-for ($i = 0; $i < strlen($string); $i++) {
-    if (strpos($vowels, $string[$i]) !== false) {
-        $vowelCount++;
+$s = "The quick brown fox jumps over the lazy dog";
+
+$vowels = 0;
+
+for($i = 0; $i < strlen($s); $i++){
+    if(strtolower($s[$i]) == "a" || strtolower($s[$i]) == "e" || strtolower($s[$i]) == "i" || strtolower($s[$i]) == "o" || strtolower($s[$i]) == "u"){
+        $vowels++;
     }
 }
-echo "a. Number of vowels: " . $vowelCount . "\n";
 
-$words = explode(" ", $string);
-$firstWord = $words[0];
-$lastWord = end($words);
-echo "b. First word: " . $firstWord . ", Last word: " . $lastWord . "\n";
+echo "Number of vowels: ".$vowels;
+echo "<br>";
 
-$capitalized = ucwords(strtolower($string));
-echo "c. Capitalized first letter of each word: " . $capitalized . "\n";
+$arr = explode(" ", $s);
 
-$noSpaces = str_replace(" ", "", $string);
-echo "d. String without spaces: " . $noSpaces . "\n";
+echo "First word: ".$arr[0];
+echo "<br>";
 
-$theCount = substr_count(strtolower($string), "the");
-echo "e. Count of 'the' (case-insensitive): " . $theCount . "\n";
+echo "Last word: ".$arr[count($arr)-1];
+echo "<br>";
 
-$replaced = str_replace("lazy dog", "smart cat", $string);
-echo "f. Updated string: " . $replaced . "\n";
+echo "Capitalized String: ".ucwords($s);
+echo "<br>";
+
+echo "String without spaces: ".str_replace(" ", "", $s);
+echo "<br>";
+
+$count = 0;
+
+for($i = 0; $i < count($arr); $i++){
+    if(strtolower($arr[$i]) == "the"){
+        $count++;
+    }
+}
+
+echo "The appears: ".$count." times";
+echo "<br>";
+
+echo "Updated String: ".str_replace("lazy dog", "smart cat", $s);
+
 ?>
