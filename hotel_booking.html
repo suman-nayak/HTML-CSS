@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hotel-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .booking-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .facility-badge {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <!-- Left Column: Hotel Details -->
+            <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
+                <div class="card h-100 border-0">
+                    <!-- Hotel Image -->
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" 
+                         alt="Hotel Image" 
+                         class="hotel-image card-img-top">
+
+                    <div class="card-body">
+                        <!-- Hotel Name and Location -->
+                        <h1 class="card-title mb-2">Grand Plaza Hotel</h1>
+                        <p class="text-muted mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-1" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            123 Main Street, Downtown, New York, NY 10001
+                        </p>
+
+                        <!-- Hotel Description -->
+                        <p class="card-text mb-4">
+                            Experience luxury and comfort at Grand Plaza Hotel. Located in the heart of downtown, 
+                            our hotel offers stunning city views, world-class amenities, and exceptional service. 
+                            Perfect for both business and leisure travelers, we provide easy access to shopping, 
+                            dining, and entertainment venues.
+                        </p>
+
+                        <!-- Facilities -->
+                        <h5 class="mb-3">Facilities & Amenities</h5>
+                        <div class="mb-4">
+                            <span class="facility-badge">🏊 Swimming Pool</span>
+                            <span class="facility-badge">🏋️ Fitness Center</span>
+                            <span class="facility-badge">📶 Free WiFi</span>
+                            <span class="facility-badge">🍽️ Restaurant</span>
+                            <span class="facility-badge">🅿️ Free Parking</span>
+                            <span class="facility-badge">🧹 Room Service</span>
+                            <span class="facility-badge">❄️ Air Conditioning</span>
+                            <span class="facility-badge">📺 Smart TV</span>
+                        </div>
+
+                        <!-- Room Price -->
+                        <div class="d-flex align-items-center">
+                            <span class="price-tag me-2">$199</span>
+                            <span class="text-muted">per night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Booking Form -->
+            <div class="col-lg-6 col-md-6">
+                <div class="booking-form h-100">
+                    <h2 class="mb-4">Book Your Stay</h2>
+
+                    <form>
+                        <!-- Guest Name -->
+                        <div class="mb-3">
+                            <label for="guestName" class="form-label">Guest Name</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="guestName" 
+                                   placeholder="Enter your full name" 
+                                   required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" 
+                                   class="form-control" 
+                                   id="email" 
+                                   placeholder="name@example.com" 
+                                   required>
+                        </div>
+
+                        <!-- Check-in and Check-out Dates -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="checkIn" class="form-label">Check-in Date</label>
+                                <input type="date" 
+                                       class="form-control" 
+                                       id="checkIn" 
+                                       required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="checkOut" class="form-label">Check-out Date</label>
+                                <input type="date" 
+                                       class="form-control" 
+                                       id="checkOut" 
+                                       required>
+                            </div>
+                        </div>
+
+                        <!-- Number of Guests -->
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Number of Guests</label>
+                            <select class="form-select" id="guests" required>
+                                <option value="" selected disabled>Select number of guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+                        </div>
+
+                        <!-- Room Type -->
+                        <div class="mb-3">
+                            <label for="roomType" class="form-label">Room Type</label>
+                            <select class="form-select" id="roomType" required>
+                                <option value="" selected disabled>Select room type</option>
+                                <option value="standard">Standard Room</option>
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="suite">Executive Suite</option>
+                                <option value="presidential">Presidential Suite</option>
+                            </select>
+                        </div>
+
+                        <!-- Book Now Button -->
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Book Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
