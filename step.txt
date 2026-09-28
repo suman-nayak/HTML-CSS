@@ -1,0 +1,11 @@
+Exception:
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT)
+catch: mysqli_sql_exception
+
+
+1. Connect to DB : $conn = new mysqli(host, username, pass, db, [PORT])
+2. Prearpe the qry" $ps = $conn -> prepare("SQL")
+3. Bind Param : $ps->bind_param("foramt", vars)
+4. Execute Query: $ps->execute(): boolean
+// Process Result
+6. close

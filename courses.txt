@@ -1,0 +1,26 @@
+$courses = [
+    [
+        "title" => "Modern Web Development",
+        "description" => "Learn the latest tools and techniques to build responsive and dynamic websites.",
+        "banner_image" => "https://xynosoft.com/storage/post-images/1722000962.png",
+        "buy_now_link" => "https://example.com/buy/modern-web-development"
+    ],
+    [
+        "title" => "JavaScript Essentials",
+        "description" => "Master core JavaScript concepts to create interactive and user-friendly web apps.",
+        "banner_image" => "https://img-c.udemycdn.com/course/750x422/1468694_d595_2.jpg",
+        "buy_now_link" => "https://example.com/buy/javascript-essentials"
+    ],
+    [
+        "title" => "CSS Flexbox & Grid",
+        "description" => "Design flexible and responsive layouts using CSS Flexbox and Grid techniques.",
+        "banner_image" => "https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/source/2dd7d3ba70bcbe34f8b0d7242c773a78/grid_flex.png",
+        "buy_now_link" => "https://example.com/buy/css-flexbox-grid"
+    ],
+    [
+        "title" => "Full-Stack Web Bootcamp",
+        "description" => "Become a full-stack developer by learning front-end and back-end web technologies.",
+        "banner_image" => "https://teacherdada.fra1.cdn.digitaloceanspaces.com/uploads/thumbnails/course_thumbnails/250331164050Full_Stack_web_dev.webp",
+        "buy_now_link" => "https://example.com/buy/full-stack-bootcamp"
+    ]
+];
