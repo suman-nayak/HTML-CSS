@@ -11,16 +11,14 @@
 
     <?php
 
-    $countryCodes = array(
-        "India" => "+91",
-        "United States" => "+1",
-        "United Kingdom" => "+44",
-        "Australia" => "+61",
-        "Canada" => "+1",
-        "Germany" => "+49",
-        "France" => "+33",
-        "Japan" => "+81"
-    );
+    $countryCodes = array( "US" => "United States",
+    "CA" => "Canada",
+    "GB" => "United Kingdom",
+    "AU" => "Australia",
+    "IN" => "India",
+    "FR" => "France",
+    "DE" => "Germany",
+    "IT" => "Italy");
 
     ?>
 
@@ -62,8 +60,8 @@
 
         } else {
 
-            echo "<h3>Country: ".$country."</h3>";
-            echo "<h3>Country Code: ".$countryCodes[$country]."</h3>";
+            echo "<h3>Country: ".$countryCodes[$country]."</h3>";
+            echo "<h3>Country Code: ".$country."</h3>";
 
         }
 
