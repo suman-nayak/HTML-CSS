@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+
+    <h1>Student Information Form</h1>
+
+    <form action="Q4.php" method="post">
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <br><br>
+
+        <label>Address:</label>
+        <br>
+        <textarea name="address" rows="4" cols="30" required></textarea>
+
+        <br><br>
+
+        <label>Mobile:</label>
+        <input type="tel" name="mobile" required>
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <br><br>
+
+        <label>Branch:</label>
+
+        <select name="branch" required>
+            <option value="">Select Branch</option>
+            <option value="MCA">MCA</option>
+            <option value="BCA">BCA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="MBA">MBA</option>
+        </select>
+
+        <br><br>
+
+        <label>Language Known:</label>
+
+        <input type="checkbox" name="language[]" value="English"> English
+        <input type="checkbox" name="language[]" value="Hindi"> Hindi
+        <input type="checkbox" name="language[]" value="Odia"> Odia
+
+        <br><br>
+
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
